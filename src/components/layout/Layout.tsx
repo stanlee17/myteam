@@ -1,12 +1,12 @@
 import { Fragment } from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
+import Navbar from './Navbar/Navbar';
+import Footer from './Footer/Footer';
 
 const Layout = () => {
   return (
     <Fragment>
-      <Header />
+      <Navbar />
       {/* Wrap all content in column-direction flexbox */}
       <div className="layout">
         <Outlet />

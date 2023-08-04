@@ -6,6 +6,12 @@
   padding: 0;
 }
 
+body {
+  background-color: $midnightGreen;
+  color: $white;
+  font-family: $livvic;
+}
+
 .app {
   display: flex;
   flex-direction: column;
