@@ -11,6 +11,11 @@ body {
   font-family: "Livvic", sans-serif;
 }
 
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
 .app {
   display: flex;
   flex-direction: column;

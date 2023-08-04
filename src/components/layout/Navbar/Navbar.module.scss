@@ -1,4 +1,25 @@
 @use '../../../styles/scss/abstracts/' as *;
 
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 0;
+
+  & .logo {
+    margin-right: 5rem;
+  }
+
+  & .links {
+    display: inline-block;
+    font-weight: 600;
+
+    & a {
+      font-size: 1.1rem;
+    }
+
+    & a:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
 }
