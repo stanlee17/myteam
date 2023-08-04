@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  flex: 1;
+}
