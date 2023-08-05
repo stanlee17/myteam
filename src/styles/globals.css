@@ -10,6 +10,7 @@ body {
   background-color: #014e56;
   color: #ffffff;
   font-family: "Livvic", sans-serif;
+  overflow-x: hidden;
 }
 
 a {

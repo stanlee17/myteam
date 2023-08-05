@@ -7,12 +7,12 @@
 
   & .wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 550px);
+    grid-template-columns: repeat(2, 45%);
     justify-content: space-between;
 
     & h1 {
       display: inline-block;
-      font-size: 6rem;
+      font-size: 6.25rem;
       font-weight: 700;
       margin: 0;
 
@@ -21,9 +21,11 @@
       }
     }
 
-    & h6 {
+    & h4 {
+      display: flex;
+      align-items: flex-end;
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1.125rem;
       line-height: 2;
       @include lineHeading($raptureBlue);
     }
@@ -31,9 +33,9 @@
     &::before {
       content: url('../../../assets/background/bg-pattern-home-1.svg');
       position: absolute;
+      z-index: -1;
       top: 100px;
       left: -100px;
-      z-index: -1;
     }
 
     &::after {
@@ -47,7 +49,54 @@
 }
 
 .whyus {
+  position: relative;
+  padding: 8rem 0;
   background-color: $sacramentoStateGreen;
   margin-top: -5px;
-  z-index: 999;
+
+  & .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-between;
+
+    & h2 {
+      font-size: 3rem;
+      padding-top: 4rem;
+      @include lineHeading($lightCoral);
+    }
+
+    & .experienced,
+    & .implement,
+    & .productivity {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      & img {
+        margin-right: 1.5rem;
+        min-width: 70px;
+        object-fit: cover;
+      }
+
+      & .content {
+        line-height: 2;
+
+        & h4 {
+          color: $lightCoral;
+          margin-bottom: 0.5rem;
+        }
+
+        & p {
+          font-weight: 600;
+        }
+      }
+    }
+
+    &::after {
+      content: url('../../../assets/background/bg-pattern-home-3.svg');
+      position: absolute;
+      bottom: 0;
+      right: -100px;
+    }
+  }
 }
