@@ -1,0 +1,31 @@
+@use '../../../styles/scss/abstracts/' as *;
+
+.ready {
+  position: relative;
+  padding: 5rem 0;
+  background-color: $lightCoral;
+  color: $sacramentoStateGreen;
+
+  & .wrapper {
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & h2 {
+      font-size: 3rem;
+    }
+
+    & .linkButton {
+      border: 2px solid $sacramentoStateGreen;
+      color: $sacramentoStateGreen;
+    }
+
+    &::before {
+      content: url('../../../assets/background/bg-pattern-home-6-about-5.svg');
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+  }
+}

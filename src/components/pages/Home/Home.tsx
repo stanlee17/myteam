@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
-import Container from '../../common/Container/Container';
 import styles from './Home.module.scss';
+import Container from '../../common/Container/Container';
+import Ready from '../../sections/Ready/Ready';
 
 // Icons
 import Person from '../../../assets/icons/icon-person.svg';
@@ -126,6 +127,7 @@ const Home = () => {
           </div>
         </Container>
       </div>
+      <Ready />
     </Fragment>
   );
 };
