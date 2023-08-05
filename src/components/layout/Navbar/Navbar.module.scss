@@ -2,24 +2,28 @@
 
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 4rem 0;
 
-  & .logo {
-    margin-right: 5rem;
-  }
+  & .navLinks {
+    display: flex;
+    align-items: center;
 
-  & .links {
-    display: inline-block;
-    font-weight: 600;
-
-    & a {
-      font-size: 1.1rem;
+    & .logo {
+      margin-right: 5rem;
     }
 
-    & a:not(:last-child) {
-      margin-right: 2rem;
+    & .links {
+      display: inline-block;
+      font-weight: 600;
+
+      & a {
+        font-size: 1.1rem;
+      }
+
+      & a:not(:last-child) {
+        margin-right: 2rem;
+      }
     }
   }
 }

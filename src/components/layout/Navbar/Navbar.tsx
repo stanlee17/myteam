@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <Container>
       <div className={styles.navbar}>
-        <div>
+        <div className={styles.navLinks}>
           {/* LOGO */}
           <Link to="/" className={styles.logo}>
             <img src={Logo} alt="myteam-logo" />

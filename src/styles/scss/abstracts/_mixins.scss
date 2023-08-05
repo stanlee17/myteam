@@ -1,0 +1,29 @@
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  'xxl': 1536px,
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+/* 50px border line on top of heading */
+@mixin lineHeading($color) {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    border-top: 4px solid $color;
+  }
+}
