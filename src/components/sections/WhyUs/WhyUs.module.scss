@@ -1,0 +1,54 @@
+@use '../../../styles/scss/abstracts/' as *;
+
+.whyus {
+  position: relative;
+  padding: 10rem 0;
+  background-color: $sacramentoStateGreen;
+
+  & .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-between;
+
+    & h2 {
+      font-size: 3rem;
+      padding-top: 4rem;
+      @include lineHeading($lightCoral);
+    }
+
+    & .experienced,
+    & .implement,
+    & .productivity {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      & img {
+        margin-right: 1.5rem;
+        min-width: 70px;
+        object-fit: cover;
+      }
+
+      & .content {
+        line-height: 2;
+
+        & h4 {
+          color: $lightCoral;
+          margin-bottom: 0.5rem;
+        }
+
+        & p {
+          font-weight: 600;
+          color: $ironWhite;
+        }
+      }
+    }
+
+    &::after {
+      content: url('../../../assets/background/bg-pattern-home-3.svg');
+      position: absolute;
+      bottom: -4px;
+      right: -100px;
+    }
+  }
+}

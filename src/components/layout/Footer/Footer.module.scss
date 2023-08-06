@@ -1,4 +1,55 @@
 @use '../../../styles/scss/abstracts/' as *;
 
+%paragraphText {
+  color: $edwardWhite;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 .footer {
+  padding: 4rem 0;
+  background-color: $darkGreen;
+
+  & .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, auto) 1fr;
+
+    & .footerLinks {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: 7rem;
+
+      & .links {
+        font-weight: 600;
+        font-size: 1.125rem;
+
+        & a:not(:last-of-type) {
+          margin-right: 2.5rem;
+        }
+      }
+    }
+
+    & .companyAddress {
+      @extend %paragraphText;
+      line-height: 1.75;
+    }
+
+    & .socialMedia {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: end;
+
+      & .svgLinks {
+        & a:not(:last-of-type) {
+          margin-right: 1rem;
+        }
+      }
+
+      & .copyright {
+        @extend %paragraphText;
+      }
+    }
+  }
 }
