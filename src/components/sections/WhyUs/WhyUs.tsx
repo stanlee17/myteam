@@ -11,7 +11,9 @@ const WhyUs = () => {
     <div className={styles.whyus}>
       <Container>
         <div className={styles.wrapper}>
-          <h2>Build & manage distributed teams like no one else.</h2>
+          <h2 className={styles.heading}>
+            Build & manage distributed teams like no one else.
+          </h2>
           <div>
             <div className={styles.experienced}>
               <img src={Person} alt="icon-person" />

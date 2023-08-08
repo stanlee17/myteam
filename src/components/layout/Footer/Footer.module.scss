@@ -4,52 +4,109 @@
   color: $edwardWhite;
   font-weight: 600;
   font-size: 0.9rem;
+  margin: 0;
 }
 
 .footer {
   padding: 4rem 0;
   background-color: $darkGreen;
 
-  & .wrapper {
+  .wrapper {
     display: grid;
     grid-template-columns: repeat(2, auto) 1fr;
+    gap: 5rem;
+  }
 
-    & .footerLinks {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-right: 7rem;
+  .footerLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-      & .links {
-        font-weight: 600;
-        font-size: 1.125rem;
+    .links {
+      font-weight: 600;
+      font-size: 1.125rem;
 
-        & a:not(:last-of-type) {
-          margin-right: 2.5rem;
-        }
+      a:not(:last-of-type) {
+        margin-right: 2.5rem;
+      }
+    }
+  }
+
+  .companyAddress {
+    @extend %paragraphText;
+    line-height: 2;
+  }
+
+  .socialMedia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: end;
+
+    .svgLinks {
+      a:not(:last-of-type) {
+        margin-right: 1rem;
       }
     }
 
-    & .companyAddress {
+    .copyright {
       @extend %paragraphText;
-      line-height: 1.75;
+    }
+  }
+
+  @include breakpoint(md) {
+    .wrapper {
+      grid-template-columns: none;
+      grid-template-areas:
+        'footerLinks footerlinks'
+        'socialMedia socialMedia';
+      justify-content: space-between;
+      gap: 2.5rem;
     }
 
-    & .socialMedia {
+    .footerLinks {
+      grid-area: footerLinks;
+      margin-right: 0;
+
+      img {
+        max-width: 100px;
+      }
+
+      .links {
+        font-size: 1rem;
+      }
+    }
+
+    .companyAddress {
+      text-align: end;
+    }
+
+    .socialMedia {
+      grid-area: socialMedia;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  @include breakpoint(sm) {
+    .wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      text-align: end;
+      text-align: center;
+    }
 
-      & .svgLinks {
-        & a:not(:last-of-type) {
-          margin-right: 1rem;
-        }
-      }
+    .footerLinks {
+      gap: 1.5rem;
+    }
 
-      & .copyright {
-        @extend %paragraphText;
-      }
+    .companyAddress {
+      text-align: center;
+    }
+
+    .socialMedia {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
     }
   }
 }

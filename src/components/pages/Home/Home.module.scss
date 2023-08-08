@@ -2,26 +2,27 @@
 
 .hero {
   position: relative;
-  padding: 5rem 0;
-  min-height: 700px;
+  min-height: 800px;
 
-  & .wrapper {
+  .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 45%);
     justify-content: space-between;
+    margin: 5rem 0;
 
-    & h1 {
+    h1 {
       display: inline-block;
       font-size: 6.25rem;
+      line-height: 1;
       font-weight: 700;
       margin: 0;
 
-      & span {
+      span {
         color: $lightCoral;
       }
     }
 
-    & h4 {
+    h4 {
       display: flex;
       align-items: flex-end;
       font-weight: 600;
@@ -34,7 +35,7 @@
       content: url('../../../assets/background/bg-pattern-home-1.svg');
       position: absolute;
       z-index: -1;
-      top: 100px;
+      top: 250px;
       left: -100px;
     }
 
@@ -44,6 +45,62 @@
       z-index: -1;
       bottom: -4px;
       right: 100px;
+    }
+  }
+
+  @include breakpoint(lg) {
+    .wrapper {
+      h1 {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    min-height: 700px;
+
+    .wrapper {
+      grid-template-columns: 1fr;
+      max-width: 80%;
+      margin: 5rem auto;
+      text-align: center;
+
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        margin: 0 auto;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    .wrapper {
+      max-width: 100%;
+      margin: 3rem auto;
+
+      h1 {
+        width: 80%;
+        margin: 1rem auto;
+        font-size: 2.5rem;
+      }
     }
   }
 }

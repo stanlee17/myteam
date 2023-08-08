@@ -5,50 +5,92 @@
   padding: 10rem 0;
   background-color: $sacramentoStateGreen;
 
-  & .wrapper {
+  .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 45%);
     justify-content: space-between;
-
-    & h2 {
-      font-size: 3rem;
-      padding-top: 4rem;
-      @include lineHeading($lightCoral);
-    }
-
-    & .experienced,
-    & .implement,
-    & .productivity {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-
-      & img {
-        margin-right: 1.5rem;
-        min-width: 70px;
-        object-fit: cover;
-      }
-
-      & .content {
-        line-height: 2;
-
-        & h4 {
-          color: $lightCoral;
-          margin-bottom: 0.5rem;
-        }
-
-        & p {
-          font-weight: 600;
-          color: $ironWhite;
-        }
-      }
-    }
 
     &::after {
       content: url('../../../assets/background/bg-pattern-home-3.svg');
       position: absolute;
       bottom: -4px;
       right: -100px;
+    }
+  }
+
+  .heading {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-top: 4rem;
+    @include lineHeading($lightCoral);
+  }
+
+  .experienced,
+  .implement,
+  .productivity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    img {
+      margin-right: 1.5rem;
+      min-width: 70px;
+      object-fit: cover;
+    }
+
+    .content {
+      line-height: 2;
+
+      h4 {
+        color: $lightCoral;
+        font-weight: 700;
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: $ironWhite;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    padding: 6rem 2rem;
+
+    .wrapper {
+      grid-template-columns: 1fr;
+
+      &::after {
+        top: 0;
+        right: -100px;
+      }
+    }
+
+    .heading {
+      font-size: 2rem;
+      padding-top: 2rem;
+      max-width: 80%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  @include breakpoint(sm) {
+    padding: 4rem 0;
+
+    .experienced,
+    .implement,
+    .productivity {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
     }
   }
 }

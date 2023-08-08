@@ -3,27 +3,58 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 4rem 0;
 
-  & .navLinks {
+  .navLinks {
     display: flex;
     align-items: center;
 
-    & .logo {
+    .logo {
       margin-right: 5rem;
     }
 
-    & .links {
+    .links {
       display: inline-block;
       font-weight: 600;
 
-      & a {
+      a {
         font-size: 1.1rem;
       }
 
-      & a:not(:last-child) {
+      a:not(:last-child) {
         margin-right: 2rem;
       }
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  @include breakpoint(md) {
+    .navLinks {
+      .logo {
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    padding: 3rem 0;
+
+    .navLinks {
+      .links {
+        display: none;
+      }
+    }
+
+    .linkButton {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
     }
   }
 }

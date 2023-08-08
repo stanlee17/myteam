@@ -6,11 +6,19 @@
   padding: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: $midnightGreen;
   color: $white;
   font-family: $livvic;
-  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
 }
 
 a {

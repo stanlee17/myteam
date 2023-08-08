@@ -2,27 +2,24 @@
 
 .container {
   width: 100%;
+  max-width: 1320px;
   height: 100%;
   margin: 0 auto;
   padding: 0 2rem;
 
-  @include breakpoint(sm) {
-    max-width: 540px;
-  }
-
-  @include breakpoint(md) {
-    max-width: 720px;
+  @include breakpoint(xl) {
+    max-width: 1140px;
   }
 
   @include breakpoint(lg) {
     max-width: 960px;
   }
 
-  @include breakpoint(xl) {
-    max-width: 1140px;
+  @include breakpoint(md) {
+    max-width: 720px;
   }
 
-  @include breakpoint(xxl) {
-    max-width: 1320px;
+  @include breakpoint(sm) {
+    max-width: 540px;
   }
 }

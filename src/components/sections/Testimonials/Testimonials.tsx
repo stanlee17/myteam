@@ -10,7 +10,7 @@ const Testimonials = () => {
   return (
     <div className={styles.testimonials}>
       <Container>
-        <h2>
+        <h2 className={styles.heading}>
           Delivering real results for top companies. Some of our
           <span> success stories.</span>
         </h2>

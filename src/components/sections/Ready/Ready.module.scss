@@ -2,30 +2,55 @@
 
 .ready {
   position: relative;
-  padding: 5rem 0;
+  padding: 6.5rem 0;
   background-color: $lightCoral;
   color: $sacramentoStateGreen;
 
-  & .wrapper {
-    padding: 0 5rem;
+  .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    & h2 {
-      font-size: 3rem;
-    }
-
-    & .linkButton {
-      border: 2px solid $sacramentoStateGreen;
-      color: $sacramentoStateGreen;
-    }
+    padding: 0 5rem;
 
     &::before {
       content: url('../../../assets/background/bg-pattern-home-6-about-5.svg');
       position: absolute;
       bottom: -4px;
       left: 0;
+    }
+  }
+
+  .heading {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .linkButton {
+    border: 2px solid $sacramentoStateGreen;
+    color: $sacramentoStateGreen;
+  }
+
+  @include breakpoint(md) {
+    .wrapper {
+      padding: 0 2rem;
+    }
+
+    .heading {
+      font-size: 2rem;
+    }
+  }
+
+  @include breakpoint(sm) {
+    padding: 6.5rem 0;
+
+    .wrapper {
+      flex-direction: column;
+      text-align: center;
+      padding: 0;
+    }
+
+    .heading {
+      margin-bottom: 1.5rem;
     }
   }
 }

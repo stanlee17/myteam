@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import styles from './Home.module.scss';
 import Container from '../../common/Container/Container';
+import Navbar from '../../layout/Navbar/Navbar';
 
 // Sections
 import WhyUs from '../../sections/WhyUs/WhyUs';
@@ -13,6 +14,7 @@ const Home = () => {
       {/* Hero */}
       <div className={styles.hero}>
         <Container>
+          <Navbar />
           <div className={styles.wrapper}>
             <h1>
               Find the best <span>talent</span>

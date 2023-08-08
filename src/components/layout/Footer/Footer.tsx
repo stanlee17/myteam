@@ -1,10 +1,10 @@
-import Container from '../../common/Container/Container';
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.scss';
 import Logo from '../../../assets/logo/logo.svg';
 import Facebook from '../../../assets/icons/icon-facebook.svg';
 import Pinterest from '../../../assets/icons/icon-pinterest.svg';
 import Twitter from '../../../assets/icons/icon-twitter.svg';
+import Container from '../../common/Container/Container';
 
 const Footer = () => {
   // Dynamic Date Function
@@ -18,7 +18,7 @@ const Footer = () => {
         <div className={styles.wrapper}>
           {/* FOOTER LINKS: Home & About */}
           <div className={styles.footerLinks}>
-            <Link to="/" className={styles.logo}>
+            <Link to="/">
               <img src={Logo} alt="myteam-logo" />
             </Link>
             <div className={styles.links}>
