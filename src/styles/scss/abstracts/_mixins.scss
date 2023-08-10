@@ -12,6 +12,22 @@ $breakpoints: (
   }
 }
 
+// @mixin mainHeading($color) {
+//   font-size: 3rem;
+//   font-weight: 700;
+//   color: $color;
+
+//   @include breakpoint(md) {
+//     font-size: 2rem;
+//   }
+// }
+
+@mixin profileAvatar($width, $borderColor) {
+  border-radius: 10rem;
+  border: 2px solid $borderColor;
+  max-width: $width;
+}
+
 /* 50px border line on top of heading */
 @mixin lineHeading($color) {
   position: relative;

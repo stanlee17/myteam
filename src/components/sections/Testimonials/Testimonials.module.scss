@@ -7,7 +7,7 @@
 
   .heading {
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     max-width: 80%;
     margin: 0 auto 6rem auto;
@@ -54,7 +54,7 @@
 
       h4 {
         color: $raptureBlue;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 1.125rem;
       }
 
@@ -65,9 +65,7 @@
     }
 
     img {
-      border-radius: 10rem;
-      border: 2px solid $lightBlue;
-      max-width: 60px;
+      @include profileAvatar(60px, $lightBlue);
     }
 
     &::before {
