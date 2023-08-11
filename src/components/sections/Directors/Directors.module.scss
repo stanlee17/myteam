@@ -116,7 +116,8 @@
       gap: 3rem 1rem;
 
       &::before {
-        display: none;
+        top: -102px;
+        clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
       }
     }
   }
