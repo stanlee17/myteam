@@ -3,6 +3,8 @@
 .about {
   position: relative;
   min-height: 600px;
+  background-color: $midnightGreen;
+  z-index: 9999;
 
   .wrapper {
     display: grid;
@@ -30,7 +32,6 @@
     &::after {
       content: url('../../../assets/background/bg-pattern-about-1-mobile-nav-1.svg');
       position: absolute;
-      z-index: -1;
       bottom: -4px;
       right: -100px;
     }
@@ -40,6 +41,46 @@
     .wrapper {
       h1 {
         font-size: 5rem;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    .wrapper {
+      grid-template-columns: 1fr;
+      max-width: 80%;
+      gap: 0;
+      margin: 2rem auto;
+      text-align: center;
+
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+        padding-top: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    .wrapper {
+      max-width: 100%;
+      margin: 1rem auto;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      &::after {
+        bottom: -105px;
+        right: -100px;
       }
     }
   }

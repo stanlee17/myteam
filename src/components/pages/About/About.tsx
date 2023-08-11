@@ -4,6 +4,7 @@ import Navbar from '../../layout/Navbar/Navbar';
 import Directors from '../../sections/Directors/Directors';
 import Ready from '../../sections/Ready/Ready';
 import styles from './About.module.scss';
+import Clients from '../../sections/Clients/Clients';
 
 const About = () => {
   return (
@@ -24,6 +25,7 @@ const About = () => {
         </Container>
       </div>
       <Directors />
+      <Clients />
       <Ready />
     </Fragment>
   );

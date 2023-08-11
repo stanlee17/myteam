@@ -1,0 +1,65 @@
+@use '../../../styles/scss/abstracts/' as *;
+
+.clients {
+  position: relative;
+  background-color: $sacramentoStateGreen;
+  padding: 10rem 0;
+
+  .heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .logos {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 75%;
+      margin: 0 auto;
+    }
+  }
+
+  &::before {
+    content: url('../../../assets/background/bg-pattern-about-4.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @include breakpoint(md) {
+    padding: 7rem 0;
+
+    .heading {
+      font-size: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    &::before {
+      top: -100px;
+      left: 0;
+    }
+  }
+
+  @include breakpoint(sm) {
+    padding: 6rem 0;
+
+    .logos {
+      grid-template-columns: auto;
+      gap: 3rem;
+
+      img {
+        max-width: 40%;
+        margin: 0 auto;
+      }
+    }
+
+    &::before {
+      left: -100px;
+    }
+  }
+}

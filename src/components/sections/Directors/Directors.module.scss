@@ -4,6 +4,7 @@
   position: relative;
   padding: 10rem 0 12rem 0;
   background-color: $deepJungleGreen;
+  z-index: 9999;
 
   .heading {
     font-size: 3rem;
@@ -81,6 +82,41 @@
 
       &:hover {
         background-color: $raptureBlue;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    padding: 5rem 0 8rem 0;
+
+    .heading,
+    .cards {
+      max-width: 80%;
+    }
+
+    .heading {
+      font-size: 2rem;
+      margin: 0 auto 4rem auto;
+    }
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem 1rem;
+      margin: 0 auto;
+    }
+  }
+
+  @include breakpoint(sm) {
+    .heading,
+    .cards {
+      max-width: 100%;
+    }
+
+    .cards {
+      grid-template-columns: 1fr;
+      gap: 3rem 1rem;
+
+      &::before {
+        display: none;
       }
     }
   }
