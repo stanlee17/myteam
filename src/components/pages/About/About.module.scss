@@ -10,7 +10,7 @@
     grid-template-columns: auto 1fr;
     gap: 8rem;
     justify-content: space-between;
-    padding: 5rem 0;
+    padding: 4rem 0;
 
     h1 {
       display: inline-block;
@@ -49,7 +49,8 @@
       grid-template-columns: 1fr;
       max-width: 80%;
       gap: 0;
-      margin: 2rem auto;
+      margin: 0 auto;
+      padding: 1rem 0;
       text-align: center;
 
       h1 {

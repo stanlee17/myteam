@@ -10,6 +10,7 @@
 .footer {
   padding: 4rem 0;
   background-color: $darkGreen;
+  z-index: 999;
 
   .wrapper {
     display: grid;

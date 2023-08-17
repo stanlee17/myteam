@@ -12,6 +12,8 @@
   }
 
   .textContent {
+    z-index: 999;
+
     h1 {
       @include heading($white, 4rem);
       margin: 2rem 0;
@@ -69,7 +71,7 @@
   }
 
   .linkButton {
-    max-width: 25%;
+    max-width: 150px;
     color: $deepJungleGreen;
   }
 
@@ -85,5 +87,57 @@
     position: absolute;
     bottom: -5px;
     right: -100px;
+  }
+
+  @include breakpoint(lg) {
+    min-height: 1350px;
+
+    .wrapper {
+      flex-direction: column;
+      padding: 1rem 0;
+    }
+
+    .textContent {
+      h1,
+      h3 {
+        text-align: center;
+      }
+    }
+
+    form {
+      min-width: 75%;
+      margin-top: 4rem;
+    }
+  }
+
+  @include breakpoint(sm) {
+    min-height: 1250px;
+
+    .wrapper {
+      padding: 1rem 0;
+    }
+
+    .textContent {
+      h1 {
+        @include heading($white, 2.5rem);
+      }
+
+      h3 {
+        @include heading($lightCoral, 2rem);
+      }
+    }
+
+    form {
+      min-width: 100%;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      bottom: -100px;
+      right: -100px;
+    }
   }
 }
