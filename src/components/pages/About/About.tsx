@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import Container from '../../common/Container/Container';
 import Navbar from '../../layout/Navbar/Navbar';
 import Directors from '../../sections/Directors/Directors';
@@ -8,7 +7,7 @@ import Clients from '../../sections/Clients/Clients';
 
 const About = () => {
   return (
-    <Fragment>
+    <div>
       <div className={styles.about}>
         <Container>
           <Navbar />
@@ -27,7 +26,7 @@ const About = () => {
       <Directors />
       <Clients />
       <Ready />
-    </Fragment>
+    </div>
   );
 };
 

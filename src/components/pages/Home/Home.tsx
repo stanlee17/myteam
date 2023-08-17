@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import styles from './Home.module.scss';
 import Container from '../../common/Container/Container';
 import Navbar from '../../layout/Navbar/Navbar';
@@ -10,7 +9,7 @@ import Ready from '../../sections/Ready/Ready';
 
 const Home = () => {
   return (
-    <Fragment>
+    <div>
       {/* Hero */}
       <div className={styles.hero}>
         <Container>
@@ -30,7 +29,7 @@ const Home = () => {
       <WhyUs />
       <Testimonials />
       <Ready />
-    </Fragment>
+    </div>
   );
 };
 
