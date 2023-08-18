@@ -5,9 +5,7 @@
   min-height: 900px;
 
   .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-between-center;
     padding: 3rem 0;
   }
 
@@ -15,12 +13,15 @@
     z-index: 999;
 
     h1 {
-      @include heading($white, 4rem);
+      font-size: 4rem;
+      font-weight: 700;
       margin: 2rem 0;
     }
 
     h3 {
-      @include heading($lightCoral, 2rem);
+      font-size: 2rem;
+      font-weight: 700;
+      color: $lightCoral;
       margin: 2rem 0;
     }
   }
@@ -28,8 +29,7 @@
   .quality,
   .usage,
   .innovation {
-    display: flex;
-    align-items: center;
+    @include flex-center-vert;
     gap: 1.5rem;
     margin-bottom: 1rem;
 
@@ -43,8 +43,7 @@
   }
 
   form {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     min-width: 50%;
     gap: 2rem;
 
@@ -89,7 +88,7 @@
     right: -100px;
   }
 
-  @include breakpoint(lg) {
+  @include breakpoint(md) {
     min-height: 1350px;
 
     .wrapper {
@@ -119,11 +118,11 @@
 
     .textContent {
       h1 {
-        @include heading($white, 2.5rem);
+        font-size: 2.5rem;
       }
 
       h3 {
-        @include heading($lightCoral, 2rem);
+        font-size: 2rem;
       }
     }
 

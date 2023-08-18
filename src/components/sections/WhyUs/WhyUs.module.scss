@@ -22,14 +22,13 @@
     font-size: 3rem;
     font-weight: 700;
     padding-top: 4rem;
-    @include lineHeading($lightCoral);
+    @include line-heading($lightCoral);
   }
 
   .experienced,
   .implement,
   .productivity {
-    display: flex;
-    align-items: center;
+    @include flex-center-vert;
     margin-bottom: 2rem;
 
     img {

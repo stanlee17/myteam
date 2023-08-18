@@ -1,14 +1,11 @@
 @use '../../../styles/scss/abstracts/' as *;
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-between-center;
   padding: 4rem 0;
 
   .navLinks {
-    display: flex;
-    align-items: center;
+    @include flex-center-vert;
 
     .logo {
       margin-right: 5rem;

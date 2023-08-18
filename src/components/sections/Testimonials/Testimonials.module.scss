@@ -65,7 +65,7 @@
     }
 
     img {
-      @include profileAvatar(60px, $lightBlue);
+      @include profile-avatar(60px, $lightBlue);
     }
 
     &::before {

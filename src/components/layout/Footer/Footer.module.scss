@@ -19,8 +19,7 @@
   }
 
   .footerLinks {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: space-between;
 
     .links {
@@ -39,8 +38,7 @@
   }
 
   .socialMedia {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     justify-content: space-between;
     text-align: end;
 
@@ -91,8 +89,7 @@
 
   @include breakpoint(sm) {
     .wrapper {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
       text-align: center;
     }
 
