@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&display=swap");
 /* 50px border line on top of heading */
-* {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
 }
 
 html,
@@ -15,6 +17,7 @@ body {
   background-color: #014e56;
   color: #ffffff;
   font-family: "Livvic", sans-serif;
+  box-sizing: border-box;
 }
 
 p {

@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  min-height: 800px;
+  min-height: 700px;
 
   .wrapper {
     display: grid;
@@ -26,6 +26,7 @@
       font-weight: 600;
       font-size: 1.125rem;
       line-height: 2;
+
       @include line-heading($raptureBlue);
     }
 
@@ -46,6 +47,18 @@
     }
   }
 
+  @include breakpoint(xl) {
+    .wrapper {
+      h1 {
+        font-size: 5.5rem;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
   @include breakpoint(lg) {
     .wrapper {
       h1 {
@@ -55,12 +68,10 @@
   }
 
   @include breakpoint(md) {
-    min-height: 700px;
-
     .wrapper {
       grid-template-columns: 1fr;
       max-width: 80%;
-      margin: 5rem auto;
+      margin: 2rem auto;
       text-align: center;
 
       h1 {
@@ -76,10 +87,6 @@
         }
       }
 
-      &::before {
-        display: none;
-      }
-
       &::after {
         margin: 0 auto;
         bottom: -4px;
@@ -92,7 +99,7 @@
   @include breakpoint(sm) {
     .wrapper {
       max-width: 100%;
-      margin: 3rem auto;
+      margin: 4rem auto;
 
       h1 {
         width: 80%;

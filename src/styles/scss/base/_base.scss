@@ -1,9 +1,11 @@
 @use '../abstracts/' as *;
 
-* {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
 }
 
 html,
@@ -15,6 +17,7 @@ body {
   background-color: $midnightGreen;
   color: $white;
   font-family: $livvic;
+  box-sizing: border-box;
 }
 
 p {

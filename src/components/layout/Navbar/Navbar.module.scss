@@ -6,34 +6,95 @@
 
   .navLinks {
     @include flex-center-vert;
-
-    .logo {
-      margin-right: 5rem;
-    }
+    gap: 5rem;
 
     .links {
-      display: inline-block;
+      display: flex;
       font-weight: 600;
+      gap: 2.5rem;
 
-      a {
+      .link {
         font-size: 1.1rem;
-      }
-
-      a:not(:last-child) {
-        margin-right: 2rem;
       }
     }
   }
 
   .hamburger {
     display: none;
+    cursor: pointer;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .sidebar {
+    background-color: $policeBlue;
+    padding: 4rem 2rem;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: 850ms;
+    min-width: 70vw;
+    min-height: 100vh;
+    z-index: 9999;
+
+    .sidebarToggle {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .menuItems {
+      margin-left: 1rem;
+    }
+
+    .menuClose {
+      cursor: pointer;
+    }
+
+    .menuLinks {
+      display: flex;
+      flex-direction: column;
+      margin: 2.5rem 0;
+      gap: 2.5rem;
+
+      .menuLink {
+        font-size: 1.125rem;
+        font-weight: 600;
+      }
+    }
+
+    .menuButton {
+      padding: 0.8rem 2.5rem;
+    }
+
+    &.active {
+      right: 0;
+      transition: 500ms;
+    }
+
+    &::after {
+      content: url('../../../assets/background/bg-pattern-about-1-mobile-nav-1.svg');
+      position: absolute;
+      bottom: -4px;
+      right: -100px;
+    }
   }
 
   @include breakpoint(md) {
     .navLinks {
-      .logo {
-        margin-right: 3rem;
-      }
+      gap: 3rem;
     }
   }
 

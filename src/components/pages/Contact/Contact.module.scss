@@ -6,7 +6,7 @@
 
   .wrapper {
     @include flex-between-center;
-    padding: 3rem 0;
+    padding: 4rem 0;
   }
 
   .textContent {
@@ -15,7 +15,6 @@
     h1 {
       font-size: 4rem;
       font-weight: 700;
-      margin: 2rem 0;
     }
 
     h3 {
