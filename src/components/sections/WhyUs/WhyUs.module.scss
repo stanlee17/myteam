@@ -53,15 +53,14 @@
     }
   }
 
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     padding: 6rem 2rem;
 
     .wrapper {
       grid-template-columns: 1fr;
 
       &::after {
-        top: 0;
-        right: -100px;
+        @include position(absolute, $top: 0, $right: -100px);
       }
     }
 

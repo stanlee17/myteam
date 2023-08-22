@@ -7,7 +7,7 @@ import Hamburger from '../../../assets/icons/icon-hamburger.svg';
 import Close from '../../../assets/icons/icon-close.svg';
 
 const Navbar = () => {
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState<boolean>(false);
 
   const showSidebar = () => setSidebar(!sidebar);
 

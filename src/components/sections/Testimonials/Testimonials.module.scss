@@ -71,7 +71,7 @@
     }
   }
 
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     padding: 7rem 2rem;
 
     .heading {
