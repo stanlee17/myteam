@@ -12,9 +12,7 @@
 
     &::after {
       content: url('../../../assets/background/bg-pattern-home-3.svg');
-      position: absolute;
-      bottom: -4px;
-      right: -100px;
+      @include position(absolute, $bottom: -4px, $right: -100px);
     }
   }
 

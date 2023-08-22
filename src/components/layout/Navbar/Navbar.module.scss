@@ -25,13 +25,11 @@
   }
 
   .overlay {
+    @include position(fixed, $top: 0, $left: 0);
     display: none;
-    position: fixed;
     z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
 
     &.active {
@@ -40,19 +38,21 @@
   }
 
   .sidebar {
-    background-color: $policeBlue;
-    padding: 4rem 2rem;
-    position: absolute;
-    top: 0;
-    right: -100%;
-    transition: 850ms;
+    @include position(absolute, $top: 0, $right: -100%);
     min-width: 70vw;
     min-height: 100vh;
     z-index: 9999;
+    padding: 4rem 2rem;
+    transition: 850ms;
+    background-color: $policeBlue;
+
+    &.active {
+      right: 0;
+      transition: 500ms;
+    }
 
     .sidebarToggle {
-      display: flex;
-      justify-content: flex-end;
+      @include flex-end-horiz;
     }
 
     .menuItems {
@@ -64,8 +64,7 @@
     }
 
     .menuLinks {
-      display: flex;
-      flex-direction: column;
+      @include flex-column;
       margin: 2.5rem 0;
       gap: 2.5rem;
 
@@ -79,16 +78,9 @@
       padding: 0.8rem 2.5rem;
     }
 
-    &.active {
-      right: 0;
-      transition: 500ms;
-    }
-
     &::after {
       content: url('../../../assets/background/bg-pattern-about-1-mobile-nav-1.svg');
-      position: absolute;
-      bottom: -4px;
-      right: -100px;
+      @include position(absolute, $bottom: -4px, $right: -100px);
     }
   }
 

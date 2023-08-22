@@ -26,9 +26,7 @@
 
   &::before {
     content: url('../../../assets/background/bg-pattern-about-4.svg');
-    position: absolute;
-    top: 0;
-    left: 0;
+    @include position(absolute, $top: 0, $left: 0);
   }
 
   @include breakpoint(md) {

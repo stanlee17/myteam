@@ -75,16 +75,12 @@
 
   &::before {
     content: url('../../../assets/background/bg-pattern-about-2-contact-1.svg');
-    position: absolute;
-    top: 200px;
-    left: -100px;
+    @include position(absolute, $top: 200px, $left: -100px);
   }
 
   &::after {
     content: url('../../../assets/background/bg-pattern-contact-2.svg');
-    position: absolute;
-    bottom: -5px;
-    right: -100px;
+    @include position(absolute, $bottom: -5px, $right: -100px);
   }
 
   @include breakpoint(md) {

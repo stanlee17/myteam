@@ -8,8 +8,8 @@
   .wrapper {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 8rem;
     justify-content: space-between;
+    gap: 8rem;
     padding: 4rem 0;
 
     h1 {
@@ -30,9 +30,7 @@
 
     &::after {
       content: url('../../../assets/background/bg-pattern-about-1-mobile-nav-1.svg');
-      position: absolute;
-      bottom: -4px;
-      right: -100px;
+      @include position(absolute, $bottom: -4px, $right: -100px);
     }
   }
 
@@ -40,10 +38,10 @@
     .wrapper {
       grid-template-columns: 1fr;
       max-width: 80%;
-      gap: 0;
-      margin: 0 auto;
       padding: 1rem 0;
+      margin: 0 auto;
       text-align: center;
+      gap: 0;
 
       h1 {
         font-size: 4rem;

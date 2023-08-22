@@ -32,18 +32,14 @@
 
     &::before {
       content: url('../../../assets/background/bg-pattern-home-1.svg');
-      position: absolute;
+      @include position(absolute, $top: 250px, $left: -100px);
       z-index: -1;
-      top: 250px;
-      left: -100px;
     }
 
     &::after {
       content: url('../../../assets/background/bg-pattern-home-2.svg');
-      position: absolute;
+      @include position(absolute, $bottom: -4px, $right: 100px);
       z-index: -1;
-      bottom: -4px;
-      right: 100px;
     }
   }
 

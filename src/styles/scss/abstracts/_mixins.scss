@@ -32,6 +32,29 @@ $breakpoints: (
   }
 }
 
+@mixin bg-position($url, $top: auto, $bottom: auto, $left: auto, $right: auto) {
+  content: url($url);
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position(
+  $position,
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
 // FLEXBOX
 @mixin flex-column {
   display: flex;
@@ -47,6 +70,11 @@ $breakpoints: (
 @mixin flex-center-column {
   @include flex-center;
   flex-direction: column;
+}
+
+@mixin flex-between-column {
+  @include flex-column;
+  justify-content: space-between;
 }
 
 @mixin flex-between-center {
@@ -68,4 +96,9 @@ $breakpoints: (
 @mixin flex-center-horiz {
   display: flex;
   justify-content: center;
+}
+
+@mixin flex-end-horiz {
+  display: flex;
+  justify-content: flex-end;
 }

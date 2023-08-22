@@ -38,8 +38,7 @@
   }
 
   .socialMedia {
-    @include flex-column;
-    justify-content: space-between;
+    @include flex-between-column;
     text-align: end;
 
     .svgLinks {

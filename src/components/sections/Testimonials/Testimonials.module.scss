@@ -25,16 +25,12 @@
 
     &::before {
       content: url('../../../assets/background/bg-pattern-home-4-about-3.svg');
-      position: absolute;
-      top: 0;
-      left: 0;
+      @include position(absolute, $top: 0, $left: 0);
     }
 
     &::after {
       content: url('../../../assets/background/bg-pattern-home-5.svg');
-      position: absolute;
-      bottom: -4px;
-      right: 0;
+      @include position(absolute, $bottom: -4px, $right: 0);
     }
   }
 
@@ -70,11 +66,8 @@
 
     &::before {
       content: url('../../../assets/icons/icon-quotes.svg');
-      position: absolute;
+      @include position(absolute, $top: -30px, $left: 0, $right: 0);
       margin: 0 auto;
-      top: -30px;
-      left: 0;
-      right: 0;
     }
   }
 

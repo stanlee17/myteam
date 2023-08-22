@@ -20,16 +20,12 @@
 
     &::before {
       content: url('../../../assets/background/bg-pattern-about-2-contact-1.svg');
-      position: absolute;
-      top: 0;
-      left: -100px;
+      @include position(absolute, $top: 0, $left: -100px);
     }
 
     &::after {
       content: url('../../../assets/background/bg-pattern-home-4-about-3.svg');
-      position: absolute;
-      bottom: -4px;
-      right: 0;
+      @include position(absolute, $bottom: -4px, $right: 0);
     }
   }
 
@@ -61,10 +57,7 @@
 
     .moreInfoBtn {
       @include flex-center;
-      position: absolute;
-      bottom: -30px;
-      left: 0;
-      right: 0;
+      @include position(absolute, $bottom: -30px, $left: 0, $right: 0);
       margin: 0 auto;
       background-color: $lightCoral;
       border-radius: 50%;
