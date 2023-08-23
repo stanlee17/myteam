@@ -5,7 +5,8 @@
   min-height: 900px;
 
   .wrapper {
-    @include flex-between-center;
+    display: flex;
+    justify-content: space-between;
     padding: 4rem 0;
   }
 
@@ -46,8 +47,17 @@
     min-width: 50%;
     gap: 2rem;
 
+    span {
+      color: $lightCoral;
+      font-size: 0.7rem;
+      font-weight: 700;
+      font-style: italic;
+      margin-top: -1.3rem;
+      margin-left: 1rem;
+    }
+
     .formControl {
-      padding: 0 1rem 1.5rem 1rem;
+      padding: 0 1rem 1.25rem 1rem;
       background-color: transparent;
       color: $white;
       font-size: 0.95rem;
@@ -60,6 +70,14 @@
       &::placeholder {
         color: $edwardWhite;
         font-weight: 600;
+      }
+
+      &.error {
+        border-bottom: 1px solid $lightCoral;
+
+        &::placeholder {
+          color: #946b6e;
+        }
       }
     }
 
