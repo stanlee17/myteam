@@ -84,6 +84,7 @@ const ContactForm = () => {
             : `${styles.formControl}`
         }
         placeholder="Name"
+        autoComplete="off"
         onChange={handleChange}
       />
       {errors.name && <span>{errors.name}</span>}
@@ -92,10 +93,11 @@ const ContactForm = () => {
         type="email"
         name="email"
         className={
-          errors.name
+          errors.email
             ? `${styles.formControl} ${styles.error}`
             : `${styles.formControl}`
         }
+        autoComplete="off"
         placeholder="Email Address"
         onChange={handleChange}
       />
@@ -105,10 +107,11 @@ const ContactForm = () => {
         type="text"
         name="companyName"
         className={
-          errors.name
+          errors.companyName
             ? `${styles.formControl} ${styles.error}`
             : `${styles.formControl}`
         }
+        autoComplete="off"
         placeholder="Company Name"
         onChange={handleChange}
       />
@@ -118,10 +121,11 @@ const ContactForm = () => {
         type="text"
         name="title"
         className={
-          errors.name
+          errors.title
             ? `${styles.formControl} ${styles.error}`
             : `${styles.formControl}`
         }
+        autoComplete="off"
         placeholder="Title"
         onChange={handleChange}
       />
@@ -130,7 +134,7 @@ const ContactForm = () => {
       <textarea
         name="message"
         className={
-          errors.name
+          errors.message
             ? `${styles.formControl} ${styles.error}`
             : `${styles.formControl}`
         }

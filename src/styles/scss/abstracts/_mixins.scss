@@ -32,15 +32,6 @@ $breakpoints: (
   }
 }
 
-@mixin bg-position($url, $top: auto, $bottom: auto, $left: auto, $right: auto) {
-  content: url($url);
-  position: absolute;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
-}
-
 @mixin position(
   $position,
   $top: auto,
@@ -55,50 +46,10 @@ $breakpoints: (
   left: $left;
 }
 
-// FLEXBOX
-@mixin flex-column {
+@mixin flexbox($direction: row, $justify: null, $align: null, $wrap: null) {
   display: flex;
-  flex-direction: column;
-}
-
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin flex-center-column {
-  @include flex-center;
-  flex-direction: column;
-}
-
-@mixin flex-between-column {
-  @include flex-column;
-  justify-content: space-between;
-}
-
-@mixin flex-between-center {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-@mixin flex-center-vert {
-  display: flex;
-  align-items: center;
-}
-
-@mixin flex-end-vert {
-  display: flex;
-  align-items: flex-end;
-}
-
-@mixin flex-center-horiz {
-  display: flex;
-  justify-content: center;
-}
-
-@mixin flex-end-horiz {
-  display: flex;
-  justify-content: flex-end;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
 }

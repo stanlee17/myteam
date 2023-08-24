@@ -89,8 +89,8 @@
     }
 
     .directorInfo {
-      line-height: 1.75;
       margin-top: 1rem;
+      line-height: 1.75;
 
       h4 {
         color: $raptureBlue;
@@ -105,12 +105,11 @@
     }
 
     .moreInfoBtn {
-      @include flex-center;
+      @include flexbox($justify: center, $align: center);
       @include position(absolute, $bottom: -30px, $left: 0, $right: 0);
       margin: 0 auto;
       background-color: $lightCoral;
       border-radius: 50%;
-      padding: 1rem 1rem;
       max-width: 60px;
       min-height: 60px;
       transition: all 0.3s ease-in-out;

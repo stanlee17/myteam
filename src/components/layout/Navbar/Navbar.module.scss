@@ -1,11 +1,11 @@
 @use '../../../styles/scss/abstracts/' as *;
 
 .navbar {
-  @include flex-between-center;
+  @include flexbox($justify: space-between, $align: center);
   padding: 4rem 0;
 
   .navLinks {
-    @include flex-center-vert;
+    @include flexbox($align: center);
     gap: 5rem;
 
     .links {
@@ -52,7 +52,7 @@
     }
 
     .sidebarToggle {
-      @include flex-end-horiz;
+      @include flexbox($justify: flex-end);
     }
 
     .menuItems {
@@ -64,7 +64,7 @@
     }
 
     .menuLinks {
-      @include flex-column;
+      @include flexbox($direction: column);
       margin: 2.5rem 0;
       gap: 2.5rem;
 

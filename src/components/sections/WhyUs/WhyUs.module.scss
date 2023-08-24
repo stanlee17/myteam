@@ -26,7 +26,7 @@
   .experienced,
   .implement,
   .productivity {
-    @include flex-center-vert;
+    @include flexbox($align: center);
     margin-bottom: 2rem;
 
     img {
@@ -78,8 +78,7 @@
     .experienced,
     .implement,
     .productivity {
-      flex-direction: column;
-      justify-content: center;
+      @include flexbox($direction: column, $justify: center);
       text-align: center;
 
       img {

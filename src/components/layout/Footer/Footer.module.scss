@@ -19,8 +19,7 @@
   }
 
   .footerLinks {
-    @include flex-column;
-    justify-content: space-between;
+    @include flexbox($direction: column, $justify: space-between);
 
     .links {
       font-weight: 600;
@@ -38,7 +37,7 @@
   }
 
   .socialMedia {
-    @include flex-between-column;
+    @include flexbox($direction: column, $justify: space-between);
     text-align: end;
 
     .svgLinks {
@@ -88,7 +87,7 @@
 
   @include breakpoint(sm) {
     .wrapper {
-      @include flex-column;
+      @include flexbox($direction: column);
       text-align: center;
     }
 

@@ -5,8 +5,7 @@
   min-height: 900px;
 
   .wrapper {
-    display: flex;
-    justify-content: space-between;
+    @include flexbox($justify: space-between);
     padding: 4rem 0;
   }
 
@@ -29,7 +28,7 @@
   .quality,
   .usage,
   .innovation {
-    @include flex-center-vert;
+    @include flexbox($align: center);
     gap: 1.5rem;
     margin-bottom: 1rem;
 
@@ -43,9 +42,9 @@
   }
 
   form {
-    @include flex-column;
-    min-width: 50%;
+    @include flexbox($direction: column);
     gap: 2rem;
+    min-width: 50%;
 
     span {
       color: $lightCoral;
@@ -57,15 +56,20 @@
     }
 
     .formControl {
-      padding: 0 1rem 1.25rem 1rem;
       background-color: transparent;
       color: $white;
       font-size: 0.95rem;
+      padding: 0 1rem 1.25rem 1rem;
       font-weight: 600;
       resize: none;
       outline: none;
       border: none;
       border-bottom: 1px solid $white;
+      transition: 0.5s ease;
+
+      &:focus {
+        border-bottom: 1px solid $raptureBlue;
+      }
 
       &::placeholder {
         color: $edwardWhite;
@@ -105,7 +109,7 @@
     min-height: 1350px;
 
     .wrapper {
-      flex-direction: column;
+      @include flexbox($direction: column);
       padding: 1rem 0;
     }
 
