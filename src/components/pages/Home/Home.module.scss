@@ -5,13 +5,12 @@
   min-height: 700px;
 
   .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 45%);
+    @include grid($columns: repeat(2, 45%));
     justify-content: space-between;
     margin: 5rem 0;
 
     h1 {
-      font-size: 6.25rem;
+      font-size: $fs-xxl;
       font-weight: 700;
       line-height: 1;
       margin: 0;
@@ -23,7 +22,7 @@
 
     h4 {
       @include flexbox($align: flex-end);
-      font-size: 1.125rem;
+      font-size: $fs-450;
       font-weight: 600;
       line-height: 2;
       @include line-heading($raptureBlue);
@@ -44,10 +43,6 @@
 
   @include breakpoint(xl) {
     .wrapper {
-      h1 {
-        font-size: 5.5rem;
-      }
-
       &::before {
         display: none;
       }
@@ -56,19 +51,16 @@
 
   @include breakpoint(lg) {
     .wrapper {
-      grid-template-columns: 1fr;
+      @include grid($columns: 1fr);
       max-width: 80%;
-      margin: 5rem auto;
+      margin: 3rem auto;
       text-align: center;
 
       h1 {
-        font-size: 4rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
       }
 
       h4 {
-        font-size: 1rem;
-
         &::before {
           display: none;
         }
@@ -86,6 +78,10 @@
   @include breakpoint(md) {
     .wrapper {
       margin: 2rem auto;
+
+      h4 {
+        font-size: $fs-400;
+      }
     }
   }
 
@@ -97,7 +93,6 @@
       h1 {
         width: 80%;
         margin: 1rem auto;
-        font-size: 2.5rem;
       }
     }
   }

@@ -1,7 +1,7 @@
-// FONT VARIABLES
+// FONTS
 $livvic: 'Livvic', sans-serif;
 
-// COLOR VARIABLES
+// COLORS
 $midnightGreen: #014e56;
 $deepJungleGreen: #004047;
 $darkGreen: #002529;
@@ -16,3 +16,12 @@ $lightCoral: #f67e7e;
 $white: #ffffff;
 $ironWhite: #ccd5d6;
 $edwardWhite: #99a8a9;
+
+// FONT SIZES
+$fs-xxl: clamp(2.5rem, 7vw + 1rem, 6.25rem);
+$fs-xl: clamp(2.5rem, 5vw + 1rem, 4rem);
+$fs-600: clamp(2rem, 3vw + 1rem, 3rem);
+$fs-500: 2rem;
+$fs-450: 1.125rem;
+$fs-400: 0.95rem;
+$fs-300: 0.75rem;

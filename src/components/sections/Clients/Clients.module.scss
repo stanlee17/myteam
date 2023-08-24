@@ -6,15 +6,14 @@
   padding: 10rem 0;
 
   .heading {
-    font-size: 3rem;
+    font-size: $fs-600;
     font-weight: 700;
     margin-bottom: 3rem;
     text-align: center;
   }
 
   .logos {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
+    @include grid($columns: repeat(5, auto));
     align-items: center;
     justify-content: center;
 
@@ -29,12 +28,11 @@
     @include position(absolute, $top: 0, $left: 0);
   }
 
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     padding: 7rem 0;
 
     .heading {
-      font-size: 2rem;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
 
     &::before {
@@ -43,12 +41,19 @@
     }
   }
 
+  @include breakpoint(md) {
+    padding: 6rem 0;
+  }
+
   @include breakpoint(sm) {
     padding: 6rem 0;
 
+    .heading {
+      margin-bottom: 4rem;
+    }
+
     .logos {
-      grid-template-columns: auto;
-      gap: 3rem;
+      @include grid($columns: auto, $gap: 3rem);
 
       img {
         max-width: 40%;

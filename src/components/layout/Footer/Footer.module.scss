@@ -3,7 +3,7 @@
 %paragraphText {
   color: $edwardWhite;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: $fs-400;
   margin: 0;
 }
 
@@ -13,9 +13,7 @@
   z-index: 999;
 
   .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, auto) 1fr;
-    gap: 5rem;
+    @include grid($columns: repeat(2, auto) 1fr, $gap: 5rem);
   }
 
   .footerLinks {
@@ -23,7 +21,7 @@
 
     .links {
       font-weight: 600;
-      font-size: 1.125rem;
+      font-size: $fs-450;
 
       a:not(:last-of-type) {
         margin-right: 2.5rem;
@@ -53,12 +51,12 @@
 
   @include breakpoint(md) {
     .wrapper {
-      grid-template-columns: none;
-      grid-template-areas:
-        'footerLinks footerlinks'
-        'socialMedia socialMedia';
+      @include grid(
+        $columns: none,
+        $areas: 'footerLinks footerlinks' 'socialMedia socialMedia',
+        $gap: 2.5rem
+      );
       justify-content: space-between;
-      gap: 2.5rem;
     }
 
     .footerLinks {
@@ -70,7 +68,7 @@
       }
 
       .links {
-        font-size: 1rem;
+        font-size: $fs-400;
       }
     }
 

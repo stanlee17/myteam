@@ -6,8 +6,7 @@
   background-color: $sacramentoStateGreen;
 
   .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 45%);
+    @include grid($columns: repeat(2, 45%));
     justify-content: space-between;
 
     &::after {
@@ -17,7 +16,7 @@
   }
 
   .heading {
-    font-size: 3rem;
+    font-size: $fs-600;
     font-weight: 700;
     padding-top: 4rem;
     @include line-heading($lightCoral);
@@ -41,13 +40,12 @@
       h4 {
         color: $lightCoral;
         font-weight: 700;
-        font-size: 1.125rem;
+        font-size: $fs-450;
         margin-bottom: 0.5rem;
       }
 
       p {
         font-weight: 600;
-        font-size: 0.95rem;
         color: $ironWhite;
       }
     }
@@ -57,7 +55,7 @@
     padding: 6rem 2rem;
 
     .wrapper {
-      grid-template-columns: 1fr;
+      @include grid($columns: 1fr);
 
       &::after {
         @include position(absolute, $top: 0, $right: -100px);
@@ -65,7 +63,6 @@
     }
 
     .heading {
-      font-size: 2rem;
       padding-top: 2rem;
       max-width: 75%;
       margin-bottom: 3rem;

@@ -1,8 +1,8 @@
 $breakpoints: (
   'sm': 576px,
   'md': 768px,
-  'lg': 992px,
-  'xl': 1200px,
+  'lg': 1000px,
+  'xl': 1240px,
   'xxl': 1400px,
 );
 
@@ -52,4 +52,12 @@ $breakpoints: (
   justify-content: $justify;
   align-items: $align;
   flex-wrap: $wrap;
+}
+
+@mixin grid($rows: null, $areas: null, $columns: null, $gap: null) {
+  display: grid;
+  gap: $gap;
+  grid-template-areas: $areas;
+  grid-template-rows: $rows;
+  grid-template-columns: $columns;
 }

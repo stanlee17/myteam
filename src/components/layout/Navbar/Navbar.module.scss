@@ -14,7 +14,7 @@
       gap: 2.5rem;
 
       .link {
-        font-size: 1.1rem;
+        font-size: $fs-450;
       }
     }
   }
@@ -65,11 +65,11 @@
 
     .menuLinks {
       @include flexbox($direction: column);
-      margin: 2.5rem 0;
       gap: 2.5rem;
+      margin: 2.5rem 0;
 
       .menuLink {
-        font-size: 1.125rem;
+        font-size: $fs-450;
         font-weight: 600;
       }
     }
@@ -87,11 +87,11 @@
   @include breakpoint(md) {
     .navLinks {
       gap: 3rem;
-    }
-  }
 
-  @include breakpoint(sm) {
-    padding: 3rem 0;
+      img {
+        width: 80%;
+      }
+    }
 
     .navLinks {
       .links {
@@ -106,5 +106,9 @@
     .hamburger {
       display: block;
     }
+  }
+
+  @include breakpoint(sm) {
+    padding: 3rem 0;
   }
 }
