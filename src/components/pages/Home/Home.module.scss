@@ -7,7 +7,7 @@
   .wrapper {
     @include grid($columns: repeat(2, 45%));
     justify-content: space-between;
-    margin: 5rem 0;
+    margin: 4rem 0;
 
     h1 {
       font-size: $fs-xxl;
@@ -53,7 +53,7 @@
     .wrapper {
       @include grid($columns: 1fr);
       max-width: 80%;
-      margin: 3rem auto;
+      margin: 2rem auto;
       text-align: center;
 
       h1 {
@@ -77,8 +77,6 @@
 
   @include breakpoint(md) {
     .wrapper {
-      margin: 2rem auto;
-
       h4 {
         font-size: $fs-400;
       }

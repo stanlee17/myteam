@@ -6,7 +6,7 @@
 
   .navLinks {
     @include flexbox($align: center);
-    gap: 5rem;
+    gap: 4rem;
 
     .links {
       display: flex;
@@ -84,7 +84,9 @@
     }
   }
 
-  @include breakpoint(md) {
+  @include breakpoint(sm) {
+    padding: 3rem 0;
+
     .navLinks {
       gap: 3rem;
 
@@ -106,9 +108,5 @@
     .hamburger {
       display: block;
     }
-  }
-
-  @include breakpoint(sm) {
-    padding: 3rem 0;
   }
 }
